@@ -1,25 +1,54 @@
 const express = require('express');
 const path = require('path');
-const emailRoute = require('./routes/email');
-require('./routes/email')
+const emailRoutes = require('./routes/email');
 
-const app = express(),
-      bodyParser = require("body-parser");
-      port = 80;
+const app = express()
+app.use(express.json())
 
 // make the left side stuff centered (portrait and bio) 
 // so theres less white space
 
 
-app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, './public')));
 
-app.use('/sendEmail', emailRoute);
+app.get('/sendEmail', emailRoutes)
 
 app.get('/', (req,res) => {
   res.sendFile(path.join(__dirname, './public/index.html'));
 });
-
-app.listen(port, () => {
-    console.log(`Server listening on the port: ${port}`);
+app.get('/testing', (req,res) => {
+  res.json({testing: 'testinggdfgsdg'})
 });
+app.listen(3000, () => {
+    console.log(`Server listening on the port: ${3000}`);
+});
+
+// asdjasui9fhsdyuilofhsdyuif TESATINGF PLEASE WORK
+
+// asdjasui9fhsdyuilofhsdyuif TESATINGF PLEASE WORK
+
+// asdjasui9fhsdyuilofhsdyuif TESATINGF PLEASE WORK
+// asdjasui9fhsdyuilofhsdyuif TESATINGF PLEASE WORK
+// asdjasui9fhsdyuilofhsdyuif TESATINGF PLEASE WORK
+
+// asdjasui9fhsdyuilofhsdyuif TESATINGF PLEASE WORK
+
+// asdjasui9fhsdyuilofhsdyuif TESATINGF PLEASE WORK
+
+// asdjasui9fhsdyuilofhsdyuif TESATINGF PLEASE WORK
+
+// asdjasui9fhsdyuilofhsdyuif TESATINGF PLEASE WORK
+
+// asdjasui9fhsdyuilofhsdyuif TESATINGF PLEASE WORK
+
+// asdjasui9fhsdyuilofhsdyuif TESATINGF PLEASE WORK
+
+// asdjasui9fhsdyuilofhsdyuif TESATINGF PLEASE WORK
+
+// asdjasui9fhsdyuilofhsdyuif TESATINGF PLEASE WORK
+
+
+// asdjasui9fhsdyuilofhsdyuif TESATINGF PLEASE WORK
+// asdjasui9fhsdyuilofhsdyuif TESATINGF PLEASE WORK
+
+// asdjasui9fhsdyuilofhsdyuif TESATINGF PLEASE WORK
